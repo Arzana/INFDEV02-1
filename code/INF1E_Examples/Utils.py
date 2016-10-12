@@ -15,7 +15,7 @@ def Populate(char: chr, amount: int):								# Define a function to replace the 
 		
 	result = ''														# Define a variable named 'result' for storing the string output.
 							
-	for i in range(0, amount):										# Add the specified char to the result for a specified amount.
+	for i in range(amount):											# Add the specified char to the result for the specified amount.
 		result += char
 	
 	return result

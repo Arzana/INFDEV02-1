@@ -5,7 +5,8 @@ def GetRectTrglStr(size: int):													# Define a function for creating a tr
 	
 	for y in range(1, size + 1):												# Loop through the height specified (starts at 1 for ease of use later).
 		result += Populate('*', y)												# Add the needed amount of '*' characters to the result (because the triangle is rectangular this is the same value as the current y coordinate.
-		if (y < size): result += '\n'											# At the end of every vertical iteration add a newline to the string, unless it is the last iteration.
+		if (y < size): 
+			result += '\n'														# At the end of every vertical iteration add a newline to the string, unless it is the last iteration.
 	
 	return result																# Return the complete result string.
 	

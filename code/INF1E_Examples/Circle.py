@@ -3,11 +3,11 @@ from math import sqrt												# Import the function for square roots from the
 		
 def GetCircleStr(diameter: int):									# Define a function for creating a circle in string format.
 	result = ''														# Define a variable named 'result' for storing the characters calculated.
-	r = diameter / 2.0												# Get the radius of the circle and make sure it is stored as a floating point value.
+	r = diameter * 0.5												# Get the radius of the circle and make sure it is stored as a floating point value.
 	
-	for y in range(0, diameter + 1):								# Loop through all vertical point in the bounding box of the circle.
-		for x in range(0, diameter + 1):							# Loop through all horizontal points in the bounding box of the circle.
-			a = y - r												# Get the distance in height from the centre of the circle to the current x coordinate
+	for y in range(diameter + 1):									# Loop through all vertical point in the bounding box of the circle.
+		for x in range(diameter + 1):								# Loop through all horizontal points in the bounding box of the circle.
+			a = y - r												# Get the distance in height from the centre of the circle to the current x coordinate.
 			b = x - r												# Get the distance in width from the centre of the circle to the current y coordinate.
 			c = sqrt(a * a + b * b)									# Get the direct distance from the centre of the circle to the current coordinate. 
 				
@@ -15,7 +15,8 @@ def GetCircleStr(diameter: int):									# Define a function for creating a circ
 				result += '*'										# Add a '*' to the string if the coordinate lays within the circle.
 			else:	
 				result += ' '										# Add a ' ' to the string if the coordinate lays outside of the circle.
-		if (y < diameter): result += '\n'							# At the end of every vertical iteration add a newline to the string, unless it is the last iteration.
+		if (y < diameter): 
+			result += '\n'											# At the end of every vertical iteration add a newline to the string, unless it is the last iteration.
 					
 	return result													# Return the complete result string.
 
