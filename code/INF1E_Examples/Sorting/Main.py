@@ -1,4 +1,5 @@
 from Bubble import Sort_Bubble
+from Selection import Sort_Selection
 from Radix import Sort_Radix
 from random import randint
 from traceback import print_exc
