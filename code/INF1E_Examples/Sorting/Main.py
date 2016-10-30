@@ -1,6 +1,8 @@
 from Bubble import Sort_Bubble
 from Selection import Sort_Selection
+from Insertion import Sort_Insertion
 from Radix import Sort_Radix
+
 from random import randint
 from traceback import print_exc
 
@@ -14,7 +16,7 @@ def CreateRandomNubers(length:int, max = 0x7FFFFFFF):
 	return result
 
 def Main():
-	numbers = CreateRandomNubers(16);
+	numbers = CreateRandomNubers(16, 16);
 	
 	print(numbers)
 	Sort_Radix(numbers)
